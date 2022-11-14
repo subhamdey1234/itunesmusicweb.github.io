@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iTunes</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+      * {
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+        font-size: 0.9rem;
+      }
+
+      /* HEADER */
+      header {
+        top: 0;
+        background-color: #4c1d95;
+        padding: 0.2rem 0.8rem;
+        position: fixed;
+        width: 100%;
+      }
+      .logo h3 {
+        color: #fff;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 72rem;
+        margin: 0 auto;
+      }
+
+      .space-between {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 1rem;
+        padding: 0;
+      }
+
+      nav ul li,
+      .directory ul li {
+        list-style-type: none;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 0.6rem;
+        border-radius: 0.3rem;
+        transition: all ease-out 200ms;
+      }
+
+      nav ul li a i {
+        margin-right: 0.4rem;
+      }
+
+      nav ul li a:hover {
+        color: #c4b5fd;
+      }
+
+      /* MAIN */
+
+      main {
+        min-height: 100vh;
+        background: #5b21b6;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        position:static;
+        
+        color: #fff;
+        align-items: center;
+        background-image: url(https://th.bing.com/th/id/R.a2d5b7591f04b3e84685e648551c0fe8?rik=PTK8iL9FyCvdEw&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f0%2f4%2f7%2f1272877-vertical-dj-hd-wallpapers-1080p-1920x1080-for-macbook.jpg&ehk=ujejd0kEVLa7TAtaQha3eucM9eJmVt83AHwmy2aIeL0%3d&risl=&pid=ImgRaw&r=0);
+        background-size: cover;
+      }
+
+      .cta {
+        padding: 2rem 5rem;
+    
+      }
+
+      .cta h1 {
+        font-size: 6rem;
+        
+      }
+      .cta h2 {
+        font-size: 4rem;
+      }
+      .cta p {
+        color: #e9d5ff;
+        max-width: 36rem;
+        margin: 0 auto;
+        
+      }
+
+      .cta .btn {
+        margin-top: 3rem;
+      }
+
+      .btn {
+        border-radius: 6px;
+        border-width: 0;
+        font-size: 0.9rem;
+        color: #fff;
+        cursor: pointer;
+        height: 44px;
+        line-height: 1.15;
+        margin: 12px 0 0;
+        outline: none;
+        padding: 0 25px;
+        text-align: center;
+        text-transform: none;
+        transition: all 0.2s, box-shadow 0.08s ease-in;
+      }
+      .btn.primary {
+        background-color: #dc2626;
+      }
+
+      .secondary {
+        background-color: #dc2626;
+      }
+
+      section.music,
+      section.video {
+        min-height: 100vh;
+        text-align: center;
+        padding-top: 5rem;
+      }
+
+      .music .cta p,
+      .video .cta p {
+        color: #334155;
+      }
+
+      .music img {
+        margin-top: 6rem;
+        width: 56rem;
+      }
+
+      .entertainment {
+        margin-top: 4rem;
+        min-height: 100vh;
+        background: #5b21b6;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        align-items: center;
+        background-image: url(https://images.unsplash.com/photo-1473691955023-da1c49c95c78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+        background-position: center;
+        background-size: cover;
+
+      }
+
+      .entertainment .cta p {
+        color: #faf5ff;
+      }
+
+      .gift-card {
+        padding: 6rem 0;
+      }
+
+      .column {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .flex-1 {
+        flex: 1;
+      }
+      .gift-card-content p {
+        line-height: 1.3;
+      }
+
+      .directory {
+        display: flex;
+        justify-content: space-around;
+        background-color: #e2e8f0;
+        padding: 1.2rem;
+      }
+
+      .directory ul {
+        padding: 0;
+      }
+
+      .directory ul li {
+        margin-top: 0.4rem;
+      }
+
+      .directory ul li a {
+        text-decoration: none;
+        color: #1e293b;
+      }
+
+      .copyright {
+        text-align: center;
+        padding: 1rem;
+        background-color: #031122;
+        color: whitesmoke;
+      }
+
+#overview .cta{
+    
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container space-between">
+        <div class="logo">
+          <h3 >iTunes</h3>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#gift-cards">Gift cards</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="overview">
+      <div class="container cta">
+        <h1 style="top: 300px;">iTunes</h1>
+        <h3 style="font-size: 35px;">Your music, movies and TV shows take center stage</h3>
+        <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;color: whitesmoke;font-size: 20px;">
+          iTunes is the best way to organize and enjoy the music, movies and TV
+          show you already have - and shop for the ones you want. Enjoy all the
+          entertainment iTunes has to offer on your Mac and PC.
+        </p>
+      </div>
+    </main>
+    <section style="background-color:rgb(27, 99, 154);" class="music" id="music">
+      <div class="container cta">
+        <h2 style="color: whitesmoke;">Music</h2>
+        <h3 style="color: whitesmoke;">Your music, movies and TV shows take center stage</h3>
+        <p style="color: whitesmoke;">
+          Apple Music is a streaming service that allows you to listen to over
+          100 million songs. Its great features include the ability to download
+          your favourite tracks and play new music personalised just for you,
+          curated playlists from our editors and many more.
+        </p>
+        <button class="btn primary">Start your trial</button>
+      </div>
+      <div>
+        <img style="border-radius: 35px;"
+          src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applemusic/macos-big-sur-ios14-macbook-air-iphone-11-pro-apple-music-web-hero.jpg"
+          alt=""
+        />
+      </div>
+    </section>
+    <section style="background-color: rgb(27, 99, 154);"  class="video" id="video">
+      <div class="container cta">
+        <h2 style="color: whitesmoke;">Video</h2>
+        <h3 style="color: whitesmoke;">The movies and TV collection you always wished for granted.</h3>
+        <p style="color: whitesmoke;">
+          Get over 90 million songs, ad-free. Listen online or off, across all
+          your devices. And hear sound all around with Spatial Audio, featuring
+          Dolby Atmos.
+        </p>
+        <button class="btn secondary">Read more</button>
+      </div>
+      <div class="entertainment">
+        <div class="container cta">
+          <h3>A world of entertainment. Available wherever you are.</h3>
+          <p>
+            Get over 90 million songs, ad-free. Listen online or off, across all
+            your devices. And hear sound all around with Spatial Audio,
+            featuring Dolby Atmos.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section style=" background-color:rgb(27, 99, 154);" class="gift-card" id="gift-cards">
+      <div class="container column">
+        <div>
+          <img style="border-radius: 35px;"
+            src="https://images.unsplash.com/photo-1613243555988-441166d4d6fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+            width="400px"
+          />
+        </div>
+        <div class="flex-1 gift-card-content">
+          <h2 style="color: whitesmoke;">Gift card</h2>
+          <p style="color: whitesmoke;">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente
+            praesentium tenetur quidem tempore ducimus aliquam voluptate
+            doloribus fuga, laboriosam velit cumque adipisci odit ullam
+            explicabo porro provident, ipsum in atque ipsa quos deleniti alias
+            id recusandae! Consequatur distinctio perferendis a reprehenderit
+            velit voluptatibus nobis magni vero ab sint. Consequuntur, quae?
+            Libero, quisquam repellat consectetur, rem doloremque, quidem
+            asperiores corporis tenetur sint accusamus fuga quasi? Fugiat sunt
+            molestiae rem nisi facilis labore doloribus itaque. Facere veritatis
+            a odio debitis eveniet quisquam, itaque iste magni sint culpa
+            aperiam hic deserunt, aliquid, aspernatur cupiditate ea reiciendis
+            repellat maiores officiis placeat et dolor.
+          </p>
+          <p style="color: whitesmoke;">Already have an orange iTunes music gift card?</p>
+
+          <button class="btn secondary">Redeem</button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="directory">
+        <div>
+          <h3>Shop and Learn</h3>
+          <ul>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Shows</a></li>
+            <li><a href="#">Apps</a></li>
+            <li><a href="#">Gift cards</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Orange store</h3>
+          <ul>
+            <li><a href="#">Find a store</a></li>
+            <li><a href="#">Today at orange</a></li>
+            <li><a href="#">Financing</a></li>
+            <li><a href="#">Orange camp</a></li>
+            <li><a href="#">Order status</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Education and Learn</h3>
+          <ul>
+            <li><a href="#">Orange & Education</a></li>
+            <li><a href="#">Shop for college</a></li>
+            <li><a href="#">Orange & Business</a></li>
+            <li><a href="#">Shop for business</a></li>
+            <li><a href="#">Jobs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>About Orange</h3>
+          <ul>
+            <li><a href="#">Newsroom</a></li>
+            <li><a href="#">Orange leadership</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">Copyright &copy; 2022 &middot; Subham Dey</div>
+    </footer>
+  </body>
+</html>
