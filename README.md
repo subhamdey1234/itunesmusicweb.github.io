@@ -1,6 +1,7 @@
 # itunesmusicweb.github.io
 frontend music web design of my music website
-![image](https://user-images.githubusercontent.com/74315357/201639817-c60f06da-8371-4714-b9ae-7d6a317392f0.png)
-![Screenshot (30)](https://user-images.githubusercontent.com/74315357/201640036-dee3e5d7-02ac-4376-9031-3df933f36fa7.png)
-![Screenshot (34)](https://user-images.githubusercontent.com/74315357/201640087-80bd8943-a674-41d1-a691-859b5ca51369.png)
-![Screenshot (33)](https://user-images.githubusercontent.com/74315357/201640110-248cb5cd-7fb4-4d2e-a7de-aad92fc11869.png)
+![Screenshot (29)](https://user-images.githubusercontent.com/74315357/201641793-cf82bdf2-1255-456e-90b8-b1508f6c8f14.png)
+![Screenshot (31)](https://user-images.githubusercontent.com/74315357/201641828-adacdaa4-2028-4a95-8932-fc7ebe74b477.png)
+![Screenshot (32)](https://user-images.githubusercontent.com/74315357/201641853-468c9d25-d242-47aa-8150-1826cb2080ac.png)
+![Screenshot (33)](https://user-images.githubusercontent.com/74315357/201641877-ef6794dc-ce27-4326-9893-22128a18bbc7.png)
+![Screenshot (34)](https://user-images.githubusercontent.com/74315357/201641895-8b6d714d-d7b7-43d4-9496-57e575f28d87.png)
